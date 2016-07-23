@@ -1,0 +1,47 @@
+.black {
+  stroke: black;
+  fill: none;
+    stroke-width: 20;
+  stroke-dasharray: 923.0598754882812;
+  animation: dash 5s ease infinite;
+  right: 125px;
+}
+
+.rainbow1 {
+  stroke: url(#linear);
+  fill: none;
+    stroke-width: 20;
+  stroke-dasharray: 923.0598754882812;
+  animation: dash 5s ease infinite;
+  
+}
+
+.hard-linear-gradient {
+    stroke: url(#Gradient-1);
+  fill: none;
+    stroke-width: 20;
+  stroke-dasharray: 923.0598754882812;
+  animation: dash 5s ease infinite;
+  
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 923.0598754882812;
+  }
+  50% {
+    stroke-dashoffset:-923.0598754882812;
+  }
+  100% {
+    stroke-dashoffset: -1846.119750976562;
+  }
+}
+
+.infinityWrapper {
+  display: flex;
+flex-wrap: row;
+  margin: 0;
+}
+.infinity {
+  margin-left:-150px;
+}

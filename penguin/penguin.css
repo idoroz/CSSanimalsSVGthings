@@ -1,0 +1,97 @@
+
+.penguinWrapper {
+  position: relative;
+    left: 100px;
+    top: 50px;
+  width: 200px;
+  height: 200px;
+  z-index: 0;
+  background: lightgray;
+}
+
+.penguinBody {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  background: black;
+  border-radius: 105px 0px 105px 0px;
+    
+}
+
+.penguinTummy {
+  position: absolute;
+  width: 125px;
+  height: 210px;
+  transform: scale(0.90);
+  background: white;
+  top: -10px;
+  left: 32px;
+  border-radius: 295px 0px 240px 0px;
+
+}
+
+span .left-eye,
+.right-eye {
+  margin-left: -5px;
+  padding: 20px;
+}
+
+.penguinBody .eyeball {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: yellow;
+  border-radius: 50%;
+  left: 85px;
+  top: 5px;
+}
+
+.penguinBody .eyeball::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 16.5px;
+  height: 16.5px;
+  background: black;
+  border-radius: 50px;
+  top: 50%;
+  left: 50%;
+  margin: -7.75px 0px 0px -4.75px;
+}
+
+.beak {
+  position: absolute;
+  height: 45px;
+  width: 90px;
+  border-radius: 90px 90px 0 0;
+  top: 0px;
+  left: 110px;
+  background: orange;
+  z-index: -1;
+}
+
+.wing {
+  position: absolute;
+  width: 125px;
+  height: 210px;
+  transform: scale(0.6) skew(22deg);
+  background: white;
+  top: 10px;
+  left: -20px;
+  border-radius: 295px 0px 240px 0px;
+  background: black;
+  border-left: 2px solid gray;
+}
+
+.penguinFeet {
+  position: absolute;
+  height: 25px;
+  width: 90px;
+  border-radius: 90px 90px 0 0;
+  bottom: 0px;
+  left: 50px;
+  background: orange;
+  z-index: -1;
+}
+

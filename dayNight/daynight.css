@@ -1,0 +1,218 @@
+
+
+.DayAndNight {
+display: flex;
+  overflow: hidden;
+}
+
+.moonwrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  background: #192839;
+}
+.lightening {
+  position: absolute;
+    width: 400px;
+  height: 400px;
+  background: url();
+  
+}
+
+.moonMoon {
+position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #374B61;
+    left: 50%;
+    transform: translateX(-50%) scale(2);
+    top: 20%;
+    z-index: 0;
+}
+
+.moonmountain {
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  top: 40px;
+  transform: scale(0.8);
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+    border-bottom: 400px solid black;
+  overflow: hidden;
+  
+}
+
+
+.sunwrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  background: #7EC0EE;
+  overflow:hidden;
+}
+
+.moonSun {
+position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #FDB813;
+    left: 50%;
+    transform: translateX(-50%) scale(2);
+    top: 20%;
+    z-index: 0;
+}
+
+.sunmountain {
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  top: 40px;
+  transform: scale(0.8);
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+    border-bottom: 400px solid green;
+  
+}
+
+/***** RAIN *****/
+
+.rain {
+  position: absolute;
+  max-width: 400px;
+  max-height: 400px;
+}
+.drop {
+  background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
+
+	width:2px;
+	height:25px;
+	position: absolute;
+	bottom:200px;
+  transform: rotate(0deg);
+ transform-origin: 50% 0%;
+	animation: fall .99s linear infinite;
+
+  
+}
+
+/* animate the drops*/
+@keyframes fall {
+	to {margin-top:900px;}
+}
+
+/**//*///*//***** CLOUDS *****//**//*///*/
+
+
+.cloud2{
+  width:200px;
+  height:70px;
+  background:#e5f3ff;
+  margin:90px 0 0 350px;
+  border-radius:50px;
+  -webkit-transform:translateX(-200px);
+  -webkit-animation: move 12s linear infinite ;
+  display:block-inline;
+
+}
+.cloud2:before{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-70px 0 0 20px;
+ 
+}
+.cloud2:after{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-40px 0 0 100px;
+}
+@-webkit-keyframes move {
+  0%{-webkit-transform:translateX(-350px);opacity:0;}
+  20%{opacity:1;}
+  60%{opacity: 0;}
+ 
+  100%{-webkit-transform:translateX(350px);opacity:0;}
+}
+
+.cloud3 {
+   width:100px;
+  height:35px;
+  background:#e5f3ff;
+  margin:20px 0 0 350px;
+  border-radius:50px;
+  -webkit-transform:translateX(-200px) ;
+  -webkit-animation: moveright 8s linear infinite ;
+  display:block-inline;
+  
+}
+
+.cloud3:before{
+  content:"";
+  position:absolute;
+  width:50px;
+  height:50px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-30px 0 0 10px;
+ 
+}
+
+.cloud3:after{
+  content:"";
+  position:absolute;
+  width:45px;
+  height:45px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-20px 0 0 50px;
+}
+
+@-webkit-keyframes moveright {
+  0%{-webkit-transform:translateX(10px);opacity:0;}
+  20%{opacity:1;}
+  60%{opacity: 0;}
+ 
+  100%{-webkit-transform:translateX(-350px);opacity:0;}
+}
+
+/***LIGHTNING************/
+
+.lightning {
+  position: absolute;
+  transform: scale(3);
+  top: 115px;
+  right: 100px;
+  
+  display:none;
+}
+
+/**FLASH THUNDER ***/
+
+.flashit{
+  
+	-webkit-animation: flash 0.25s 1 ;
+	animation: flash 0.25s 1 ;
+  animation-iteration-count: 1;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; }
+  50% { opacity: 1; }
+	100% { background-color: white; }
+}
+@keyframes flash {
+		0% { opacity: 1; }
+  50% { opacity: 1; }
+	100% { background-color: white; }
+}

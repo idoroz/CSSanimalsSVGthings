@@ -1,0 +1,217 @@
+.idoWrapper {
+position: relative;
+    width: 100%;
+    height: 300px;
+/* border-top: 1px solid black;
+ border-bottom: 1px solid black;*/
+display: flex;
+justify-content:center;
+    margin-top: 15%;
+background: lightblue;
+}
+
+.imgWrapper {
+    display: inline-block;
+        position: relative;
+    width: 187px;
+    height: 300px;
+
+       left: 0%;
+ 
+}
+
+.imgWrapper.SlideIn {
+
+     transition        : 0.7s ease-in;
+   
+
+        left: -18%;
+ 
+
+}
+
+#idoArm.fullArm {
+    position: absolute;
+    left: -10px;
+    top: 115px;
+    
+    transform: rotate(0deg);
+    transform-origin: bottom bottom;
+    z-index: 30;
+}
+
+.torso {
+    position: absolute;
+    left: -65%;
+    top: -19%;
+    z-index: 20;
+}
+
+.headAndPocket {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+#idoBrow.eyebrow {
+  position: absolute;
+    left: 58px;
+    top: 47px;
+        transform: rotate(0deg);
+    z-index: 40;
+   
+}
+
+/****** Animations Classes *******/
+
+#idoArm.Animate{
+    transition        : .4s ease-in-out;
+
+   left: -24px;
+    top: 83px;
+   
+        transform: translate3d(0px, 0px, 0px);
+          transform: rotate(26deg);   
+}
+
+#idoBrow.Animate{
+    transition        : .4s ease-in-out;
+     left: 58px;
+    top: 47px;
+    transform: translate3d(0px, 0px, 0px);
+         transform: rotate(-15deg) ;
+}
+
+#idoArm.AnimateOut{
+    transition        : .2s ease-out;
+    transform: translate3d(0px, 0px, 0px);
+    transform : rotate(0deg);
+}
+
+#idoBrow.AnimateOut{
+    transition        : .2s ease-out;
+
+        
+         transform: rotate(0deg);
+}
+
+
+
+.steam-container {
+  width: 100px;
+  height: 50px;
+    margin-top: 70%;
+    margin-left: -1%;
+    position: absolute;
+    z-index: 100;
+}
+
+.squiggle-container {
+  width: 7px;
+  height: 30px;
+  display: inline-block;
+}
+
+.squiggle-container-1 {
+  transform: translateY(10px);
+}
+.squiggle-container-1 .squiggle {
+  animation: move-and-fade 2.5s linear infinite;
+  animation-delay: 0.2s;
+  width: 40px;
+}
+@keyframes move-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+.squiggle-container-2 {
+  transform: translateY(0px);
+}
+.squiggle-container-2 .squiggle {
+  animation: move-and-fade 2.5s linear infinite;
+  animation-delay: 0s;
+  width: 30px;
+}
+@keyframes move-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+.squiggle-container-3 {
+  
+    transform: translate(-85%,45%);
+}
+.squiggle-container-3 .squiggle {
+  animation: move-and-fade 2.5s linear infinite;
+  animation-delay: 0.4s;
+  width: 40px;
+}
+@keyframes move-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
+.squiggle {
+  stroke-dasharray: 100;
+}
+.squiggle path {
+  stroke: #5D5D5D;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+/*****STEAM SVG FIX*************/
+
+svg#Layer_1 {
+width: 20%;
+    height: 20%;
+    }
+
+/*****//***STEAM SVG FIX-end*************/

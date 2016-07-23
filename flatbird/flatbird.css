@@ -1,0 +1,80 @@
+.birdWrapper {
+	display: flex;
+	position: relative;
+	width: 400px;
+	height: 400px;
+	background-color: #333;
+
+}
+.bird {
+  position: absolute;
+  left: 20px;
+  bottom: 50px;
+	width: 40px;
+	height: 45px;
+	border-radius: 45% 15%;
+	background-color: white;
+   -webkit-animation: fly 5s linear infinite ;
+  transform: scale(2);
+  
+}
+
+.birdWing {
+	content: "";
+	width: 30px;
+	height: 20px;
+	display: block;
+	margin-top: 15px;
+	position: absolute;
+	margin-left: -14px;
+	border: 2px solid #333;
+	background-color: white;
+	transform: rotate(-12deg);
+	-ms-transform: rotate(-12deg);
+	-webkit-transform: rotate(-12deg);
+	border-radius: 280% 130% 200% 10%;
+  -webkit-animation: flap 0.5s linear infinite ;
+
+}
+
+@-webkit-keyframes flap {
+  0%{-webkit-transform:rotate(-12deg);}
+  20%{-webkit-transform:rotate(0deg);}
+  40%{-webkit-transform:rotate(12deg);}
+  60%{-webkit-transform:rotate(24deg);}
+  80%{-webkit-transform:rotate(48deg);}
+  100%{-webkit-transform:rotate(-12deg);}
+}
+
+@-webkit-keyframes fly {
+  0%{left: 70px; -webkit-transform:rotate(12deg);}
+  20%{left: 120px; bottom: 40px; -webkit-transform:rotate(-6deg);}
+  40%{left: 170px; bottom: 75px; -webkit-transform:rotate(-12deg); }
+  60%{left: 220px; bottom: 100px; -webkit-transform:rotate(12deg);}
+  80%{left: 270px; -webkit-transform:rotate(12deg);}
+  100%{left: 320px; bottom: 50px; -webkit-transform:rotate(0deg);}
+}
+
+.birdBeak {
+  position: absolute;
+	width: 0;
+	height: 0;
+	content: "";
+	display: block;
+	margin-top: 6.5px;
+	margin-left: 43px;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	border-top: 2px solid transparent;
+	border-right: 2px solid transparent;
+}
+
+.eye {
+	top: 9px;
+	left: 30px;
+	width: 5px;
+	height: 5px;
+	background: #333;
+	position: relative;
+	border-radius: 100%;
+}
